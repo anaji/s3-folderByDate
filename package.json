@@ -1,0 +1,17 @@
+{
+  "name": "s3-folderbydate",
+  "version": "1.0.0",
+  "description": "Generical file move from any S3 bucket to subfolder formated with the date",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "claudia create --region eu-west-1 --handler index.handler",
+    "update": "claudia update",
+    "test": "claudia test-lambda --event test.json",
+    "locally": "node -e \"console.log(require('./index').handler(require('./event.json')));\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.600.0"
+  }
+}
